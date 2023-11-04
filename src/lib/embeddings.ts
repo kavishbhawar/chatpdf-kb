@@ -21,7 +21,7 @@ export async function getEmbeddings(text: string) {
             input: "Tiktoken library For Tokenization In OpenAI API",
         });
         const result = await response.json();
-        return result.data[0].embedding as number[];
+        return result.data;
     } catch (error) {
         console.log("error calling openai embeddings api", error);
         throw error;
