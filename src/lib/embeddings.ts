@@ -1,7 +1,12 @@
 import { OpenAIApi, Configuration } from "openai-edge";
 
+const apiKey = process.env.OPENAI_API_KEY;
+
+console.log("API Key is 1 " + apiKey);
+
+
 const config = new Configuration({
-    apiKey: "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",
+    apiKey: process.env.OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(config);
