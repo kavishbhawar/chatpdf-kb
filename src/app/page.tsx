@@ -41,7 +41,7 @@ export default async function Home() {
             )}
             <div className="ml-3">
 
-              <SubscriptionButton isPro={isPro} />
+              {/* <SubscriptionButton isPro={isPro} /> */}
 
             </div>
 
@@ -51,7 +51,7 @@ export default async function Home() {
             Join millions of students, researchers and professionals to instantly
             answer questions and understand research with AI
           </p>
-          <div className="w-full mt-4">
+          {/* <div className="w-full mt-4">
             {isAuth ? (
               <FileUpload />
             ) : (
@@ -62,7 +62,7 @@ export default async function Home() {
                 </Button>
               </Link>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
