@@ -20,7 +20,7 @@ export async function downloadFromS3(file_key: string) {
         };
         console.log("params =>" + params)
         const obj = await s3.getObject(params).promise();
-        const file_name = `src/pdf/tmp-${Date.now().toString()}.pdf`;
+        const file_name = `/tmp/tmp-${Date.now().toString()}.pdf`;
         fs.writeFileSync(file_name, obj.Body as Buffer)
         return file_name;
 
