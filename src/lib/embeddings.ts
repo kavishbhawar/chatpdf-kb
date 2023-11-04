@@ -15,9 +15,10 @@ export async function getEmbeddings(text: string) {
     console.log("Open API Key is " + process.env.OPENAI_API_KEY);
 
     try {
+        const openai = new OpenAIApi(config);
         const response = await openai.createEmbedding({
             model: "text-embedding-ada-002",
-            input: text.replace(/\n/g, " "),
+            input: "Tiktoken library For Tokenization In OpenAI API",
         });
         const result = await response.json();
         return result.data[0].embedding as number[];
